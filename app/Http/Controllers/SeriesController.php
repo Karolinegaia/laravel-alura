@@ -13,14 +13,7 @@ class SeriesController extends Controller
             'Lost',
             'Grey/s Anatomy'
         ];
+        return view('listar-series')->with('series', $series);
     
-        $html = '<ul>';
-        foreach ($series as $serie){
-            $html .= "<li>$serie</li>";
-        }
-
-            $html .= '</ul>';
-            return $html;
-        }
-    
+    }
 }
